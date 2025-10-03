@@ -1,0 +1,15 @@
+<h1>{{ book.title }}</h1>
+<p>Автор: {{ book.author }}</p>
+<p>Страниц: {{ book.quantity_page }}</p>
+<p>{{ book.description }}</p>
+
+{% if book.image %}
+    <img src="{{ book.image.url }}" alt="{{ book.title }}" width="200">
+{% endif %}
+
+{% if book.book_audio %}
+    <p><a href="{{ book.book_audio }}" target="_blank">Слушать аудио книгу</a></p>
+{% endif %}
+
+<p>Дата добавления: {{ book.created_at }}</p>
+<a href="/books/">Назад к списку книг</a>

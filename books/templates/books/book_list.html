@@ -1,0 +1,10 @@
+<h1>Список книг</h1>
+<ul>
+    {% for book in books %}
+        <li>
+            <a href="{{ book.pk }}/">{{ book.title }}</a> — {{ book.author }}
+        </li>
+    {% empty %}
+        <li>Книг пока нет</li>
+    {% endfor %}
+</ul>
